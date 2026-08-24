@@ -97,3 +97,30 @@ function renderProducts(productsList) {
 }
 
 renderProducts(products);
+
+// ==================== FILTROS ====================
+
+const filterButtons = document.querySelectorAll(".filter-button");
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const category = button.dataset.category;
+
+        filterButtons.forEach(button => {
+            button.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        if (category === "todos") {
+            renderProducts(products);
+            return;
+        }
+
+        const filteredProducts = products.filter(product => {
+            return product.category === category;
+        });
+
+        renderProducts(filteredProducts);
+    });
+});
