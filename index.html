@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StepZone | Estilo Em Cada Passo</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="#home" class="logo" id="logo">StepZone</a>
+            <nav class="nav" id="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="#produtos" class="nav-link">Produtos</a></li>
+                    <li class="nav-item"><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+            <button class="cart-button" id="cart-button" type="button" aria-label="Abrir carrinho">
+                🛒 <span class="cart-count" id="cart-count">0</span>
+            </button>
+            <button class="menu-button" id="menu-button" type="button" aria-label="Abrir menu">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-section home-section" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-subtitle">Seu próximo passo começa aqui</span>
+                    <h1 class="hero-title">Encontre o tênis perfeito para você</h1>
+                    <p class="hero-description">Conforto, estilo e qualidade para acompanhar todos os seus passos.</p>
+                    <a href="#produtos" class="button hero-button">Ver produtos</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section products-section" id="produtos">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Nossa coleção</span>
+                    <h2 class="section-title">Produtos</h2>
+                    <p class="section-description">Encontre o calçado ideal para o seu estilo.</p>
+                </div>
+
+                <div class="products-filters" id="products-filters">
+                    <button class="filter-button active" type="button" data-category="todos">Todos</button>
+                    <button class="filter-button" type="button" data-category="corrida">Corrida</button>
+                    <button class="filter-button" type="button" data-category="casual">Casual</button>
+                    <button class="filter-button" type="button" data-category="basquete">Basquete</button>
+                    <button class="filter-button" type="button" data-category="futebol">Futebol</button>
+                </div>
+
+                <div class="products-grid" id="products-grid"></div>
+            </div>
+        </section>
+
+        <section class="page-section product-details-section hidden" id="produto-detalhes">
+            <div class="container">
+                <button class="back-button" id="back-to-products" type="button">← Voltar para produtos</button>
+                <div class="product-details">
+                    <div class="product-details-image">
+                        <img src="" alt="" id="detail-product-image">
+                    </div>
+                    <div class="product-details-info">
+                        <span class="product-category" id="detail-product-category">Categoria</span>
+                        <h1 class="product-details-title" id="detail-product-name">Nome do produto</h1>
+                        <p class="product-details-description" id="detail-product-description">Descrição do produto.</p>
+                        <span class="product-details-price" id="detail-product-price">R$ 0,00</span>
+                        <button class="button add-to-cart-button" id="detail-add-to-cart" type="button">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section cart-section hidden" id="carrinho">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Seu pedido</span>
+                    <h2 class="section-title">Carrinho</h2>
+                </div>
+
+                <div class="cart-items" id="cart-items"></div>
+
+                <div class="empty-cart hidden" id="empty-cart">
+                    <p>Seu carrinho está vazio.</p>
+                    <button class="button" id="continue-shopping" type="button">Continuar comprando</button>
+                </div>
+
+                <div class="cart-summary" id="cart-summary">
+                    <div class="cart-summary-row">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">R$ 0,00</span>
+                    </div>
+                    <div class="cart-summary-row">
+                        <span>Frete</span>
+                        <span id="cart-shipping">R$ 0,00</span>
+                    </div>
+                    <div class="cart-summary-row cart-total">
+                        <span>Total</span>
+                        <span id="cart-total">R$ 0,00</span>
+                    </div>
+                    <button class="button checkout-button" id="checkout-button" type="button">Finalizar compra</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section checkout-section hidden" id="checkout">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Última etapa</span>
+                    <h2 class="section-title">Finalizar compra</h2>
+                </div>
+
+                <form class="checkout-form" id="checkout-form">
+                    <fieldset class="form-section">
+                        <legend>Dados pessoais</legend>
+                        <div class="form-group">
+                            <label for="customer-name">Nome completo</label>
+                            <input type="text" id="customer-name" name="name" placeholder="Digite seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-email">E-mail</label>
+                            <input type="email" id="customer-email" name="email" placeholder="Digite seu e-mail" required>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-section">
+                        <legend>Endereço de entrega</legend>
+                        <div class="form-group">
+                            <label for="customer-address">Endereço</label>
+                            <input type="text" id="customer-address" name="address" placeholder="Rua, número e complemento" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="customer-city">Cidade</label>
+                                <input type="text" id="customer-city" name="city" placeholder="Cidade" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="customer-cep">CEP</label>
+                                <input type="text" id="customer-cep" name="cep" placeholder="00000-000" required>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-section">
+                        <legend>Pagamento</legend>
+                        <div class="form-group">
+                            <label for="payment-method">Forma de pagamento</label>
+                            <select id="payment-method" name="payment" required>
+                                <option value="">Selecione uma opção</option>
+                                <option value="pix">PIX</option>
+                                <option value="credit-card">Cartão de crédito</option>
+                                <option value="debit-card">Cartão de débito</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <button class="button submit-order-button" type="submit">Confirmar pedido</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="page-section success-section hidden" id="sucesso">
+            <div class="container">
+                <div class="success-content">
+                    <div class="success-icon">✓</div>
+                    <h1 class="success-title">Pedido realizado com sucesso!</h1>
+                    <p class="success-message">Obrigado pela sua compra. Seu pedido foi recebido e está sendo processado.</p>
+                    <p class="order-number">Número do pedido: <strong id="order-number">#000000</strong></p>
+                    <button class="button" id="back-to-home" type="button">Voltar para a loja</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section about-section" id="sobre">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Sobre nós</span>
+                    <h2 class="section-title">Sobre a StepZone</h2>
+                </div>
+                <div class="about-content">
+                    <p>A StepZone nasceu com a missão de oferecer calçados que combinam estilo, conforto e qualidade para todos os momentos.</p>
+                    <p>Nossa coleção foi pensada para acompanhar você em cada passo.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="contato">
+        <div class="container footer-container">
+            <div class="footer-column">
+                <h3 class="footer-title">StepZone</h3>
+                <p>Seu próximo passo começa aqui.</p>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Contato</h3>
+                <ul class="footer-list">
+                    <li><a href="mailto:contato@stepzone.com">contato@stepzone.com</a></li>
+                    <li><a href="tel:+5511999999999">(11) 99999-9999</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Redes sociais</h3>
+                <ul class="footer-list">
+                    <li><a href="#" aria-label="Instagram">Instagram</a></li>
+                    <li><a href="#" aria-label="Facebook">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 StepZone. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
