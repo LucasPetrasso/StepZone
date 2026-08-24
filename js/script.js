@@ -6,7 +6,7 @@ const products = [
         name: "Step Runner",
         category: "corrida",
         price: 299.90,
-        image: "./assets/images/step-runner.jpg",
+        image: "./images/step-runner.jfif",
         description: "Tênis leve e confortável para acompanhar seus treinos e corridas."
     },
     {
@@ -14,7 +14,7 @@ const products = [
         name: "Urban Move",
         category: "casual",
         price: 249.90,
-        image: "./assets/images/urban-move.jpg",
+        image: "./images/urban-move.jfif",
         description: "Estilo e conforto para o dia a dia."
     },
     {
@@ -22,7 +22,7 @@ const products = [
         name: "Court Pro",
         category: "basquete",
         price: 399.90,
-        image: "./assets/images/court-pro.jpg",
+        image: "./images/court-pro.jfif",
         description: "Desempenho e estabilidade para dominar as quadras."
     },
     {
@@ -30,7 +30,7 @@ const products = [
         name: "Goal Elite",
         category: "futebol",
         price: 349.90,
-        image: "./assets/images/goal-elite.jpg",
+        image: "./images/goal-elite.jfif",
         description: "Precisão e velocidade para quem vive o futebol."
     },
     {
@@ -38,7 +38,7 @@ const products = [
         name: "Street One",
         category: "casual",
         price: 279.90,
-        image: "./assets/images/street-one.jpg",
+        image: "./images/street-one.jfif",
         description: "Um visual moderno para completar seu estilo."
     },
     {
@@ -46,7 +46,7 @@ const products = [
         name: "Runner X",
         category: "corrida",
         price: 329.90,
-        image: "./assets/images/runner-x.jpg",
+        image: "./images/runner-x.jfif",
         description: "Amortecimento e leveza para seus melhores quilômetros."
     },
     {
@@ -54,7 +54,7 @@ const products = [
         name: "Dunk Force",
         category: "basquete",
         price: 429.90,
-        image: "./assets/images/dunk-force.jpg",
+        image: "./images/dunk-force.jfif",
         description: "Potência e suporte para suas jogadas."
     },
     {
@@ -62,7 +62,7 @@ const products = [
         name: "Speed Pro",
         category: "futebol",
         price: 379.90,
-        image: "./assets/images/speed-pro.jpg",
+        image: "./images/speed-pro.jfif",
         description: "Velocidade e controle para dominar o campo."
     }
 ];
