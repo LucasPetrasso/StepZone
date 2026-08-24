@@ -37,6 +37,8 @@
 }
 
 .product-card {
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
@@ -72,6 +74,9 @@
 }
 
 .product-card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
     padding: 22px;
 }
 
@@ -98,6 +103,7 @@
 }
 
 .product-card-footer {
+    margin-top: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
